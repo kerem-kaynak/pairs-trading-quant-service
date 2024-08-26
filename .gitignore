@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.env
+
+# Flask
+instance/
+.webassets-cache
+
+# SQLAlchemy
+*.db
+
+# IDEs
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Test coverage
+htmlcov/
+.coverage
+.coverage.*
+.cache
+
+# Dependency directories
+.eggs/
+pip-wheel-metadata/
+
+# Build output
+*.egg-info/
+dist/
+build/

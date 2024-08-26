@@ -1,0 +1,68 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+pip-log.txt
+pip-delete-this-directory.txt
+.tox
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.mypy_cache
+.pytest_cache
+.hypothesis
+
+# Virtual environment
+venv
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDEs
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS generated
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project specific
+Dockerfile
+docker-compose.yml
+README.md
+LICENSE
+tests/
+*.md
+*.yml
+*.yaml
+!cloudbuild.yaml
+
+# Local development files
+.env.template
+Makefile
+
+# Cloud specific
+.gcloudignore
+
+# Any other files/directories specific to your project that shouldn't be in the Docker image

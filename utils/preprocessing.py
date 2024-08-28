@@ -34,7 +34,7 @@ def construct_df_from_ohlc(
     df = pd.DataFrame(data)
     df[date_column_key] = pd.to_datetime(df[date_column_key])
 
-    pivot_df = df.pivot(index=date_column_key, columns=ticker_column_key, values=price_column_key)
+    pivot_df = df.pivot_table(index=date_column_key, columns=ticker_column_key, values=price_column_key, aggfunc="first")
     pivot_df.sort_index(inplace=True)
     pivot_df = pivot_df.astype(float)
     pivot_df = pivot_df.interpolate(method='linear')

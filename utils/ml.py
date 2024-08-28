@@ -37,8 +37,7 @@ def apply_optics(scaled_principal_components: np.ndarray, df_returns: pd.DataFra
     :param df_returns: DataFrame of returns
     :return: List of pairs to evaluate
     """
-    min_samples = max(2, int(0.1 * scaled_principal_components.shape[0]))
-    optics = OPTICS(min_samples=min_samples, max_eps=5, xi=0.05, metric='euclidean', cluster_method='xi')
+    optics = OPTICS(min_samples=5, max_eps=10, xi=0.1, metric='euclidean', cluster_method='xi')
     optics.fit(scaled_principal_components)
     labels = optics.labels_
 

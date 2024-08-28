@@ -93,7 +93,6 @@ def suggest_pairs() -> Tuple[Dict[str, Union[List[Dict[str, Any]], str]], int]:
         df_returns = compute_returns(df)
         scaled_principal_components = apply_pca_and_scaling(df_returns)
         pairs_to_eval = apply_optics(scaled_principal_components, df_returns)
-        print(pairs_to_eval)
         suggested_pairs = run_statistical_criteria_tests_for_pairs(
             pairs_to_eval,
             df

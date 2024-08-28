@@ -1,7 +1,6 @@
 from typing import Any, Dict, List
 import numpy as np
 import pandas as pd
-import pendulum
 
 def compute_returns(df: pd.DataFrame) -> pd.DataFrame:
     """
@@ -38,5 +37,7 @@ def construct_df_from_ohlc(
     pivot_df.sort_index(inplace=True)
     pivot_df = pivot_df.astype(float)
     pivot_df = pivot_df.interpolate(method='linear')
+    valid_columns = pivot_df.columns[pivot_df.iloc[0].notna() & pivot_df.iloc[-1].notna()]
+    pivot_df = pivot_df[valid_columns]
 
     return pivot_df

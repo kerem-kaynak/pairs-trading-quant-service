@@ -80,10 +80,10 @@ def calculate_mean_crossing_frequency(residuals: pd.Series) -> int:
 def run_statistical_criteria_tests_for_pairs(
         pairs_to_eval: List[Tuple[str, str]],
         df: pd.DataFrame,
-        cointegration_threshold: float = 0.1,
+        cointegration_threshold: float = 0.05,
         hurst_exponent_threshold: float = 0.5,
         half_life_threshold: float = 260,
-        mean_crossings_threshold: int = 8
+        mean_crossings_threshold: int = 12
     ) -> List[Dict[str, Any]]:
     """
     Run statistical criteria tests for the given pairs and return valid pairs.

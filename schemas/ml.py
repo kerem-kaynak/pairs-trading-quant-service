@@ -16,3 +16,24 @@ rlrt_schema = {
     },
     "required": ["data"]
 }
+
+pairs_schema = {
+    "type": "object",
+    "properties": {
+        "data": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "ticker": {"type": "string"},
+                    "date": {"type": "string", "format": "date"},
+                    "price": {"type": "number"}
+                },
+                "required": ["ticker", "date", "price"],
+                "additionalProperties": True
+            },
+            "minItems": 1
+        }
+    },
+    "required": ["data"]
+}

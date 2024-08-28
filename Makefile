@@ -24,7 +24,6 @@ setup:
 run-local:
 	flask run --host=0.0.0.0 --port=8080
 
-# Helper target to print all variables
 print-env:
 	@echo "Environment variables:"
 	@echo "INSTANCE_CONNECTION_NAME: $(INSTANCE_CONNECTION_NAME)"

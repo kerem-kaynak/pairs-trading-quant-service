@@ -1,10 +1,5 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
 import os
-from google.cloud.sql.connector import Connector, IPTypes
-import sqlalchemy
-
-db = SQLAlchemy()
 
 def create_app():
     app = Flask(__name__)

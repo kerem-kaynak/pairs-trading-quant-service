@@ -5,7 +5,9 @@ def create_app():
     app = Flask(__name__)
 
     from routes.ml import ml
+    from routes.trading import trading
     app.register_blueprint(blueprint=ml, url_prefix="/ml")
+    app.register_blueprint(blueprint=trading, url_prefix="/trading")
 
     return app
 

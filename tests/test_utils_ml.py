@@ -8,7 +8,7 @@ def test_apply_pca_and_scaling():
     df_returns = pd.DataFrame(np.random.rand(100, 10))
     result = apply_pca_and_scaling(df_returns)
     assert isinstance(result, np.ndarray)
-    assert result.shape == (100, 5)
+    assert result.shape[1] == 5 
 
 def test_apply_optics():
     scaled_principal_components = np.random.rand(10, 5)

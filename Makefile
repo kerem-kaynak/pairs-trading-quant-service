@@ -9,14 +9,8 @@ run:
 build:
 	docker build -t myapp .
 
-test:
-	python -m unittest discover tests
-
 pytest:
 	PYTHONPATH=$(PWD) pytest tests/
-
-deploy:
-	gcloud run deploy myapp --source .
 
 setup:
 	pip install -r requirements.txt
